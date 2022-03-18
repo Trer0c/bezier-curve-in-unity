@@ -6,15 +6,13 @@ using UnityEngine;
 public class BezierController : MonoBehaviour
 {
     [SerializeField] private Transform _target;
+    [Range(0, 1)] private float t;
     private List<Transform> _pointsTransform = new List<Transform>();
     private List<Vector3> _pointsPos = new List<Vector3>();
+    private Vector3[] _arrayPos;
     private bool _check;
     private int _index;
     private float _speed;
-    private Vector3[] _arrayPos;
-
-    [Range(0, 1)]
-    public float t;
 
     private void Start()
     {

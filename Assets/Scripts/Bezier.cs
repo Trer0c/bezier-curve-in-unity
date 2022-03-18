@@ -37,10 +37,4 @@ public static class Bezier
         }
         return dataRec;
     }
-
-    public static Vector3 GetFirstDerivative(List<Transform> points, float a) {
-        a = Mathf.Clamp01(a);
-        float oneMinusT = 1f - a;
-        return new Vector3(0, 0, 0);
-    }
 }
