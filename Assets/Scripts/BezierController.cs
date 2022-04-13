@@ -16,16 +16,19 @@ public class BezierController : MonoBehaviour
 
     private void Start()
     {
-        _index = 0;
         if (_pointsTransform.Count != 0)
+        {
             _pointsTransform.Clear();
+        }
         foreach (Transform child in _target)
+        {
             _pointsTransform.Add(child);
+        }
         _index = 0;
         _speed = 0.001f;
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (!_check)
         {
